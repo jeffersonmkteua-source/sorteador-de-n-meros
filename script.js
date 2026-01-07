@@ -5,15 +5,16 @@ botao.addEventListener("click", function () {
     const max = parseInt(document.getElementById("numeroMax").value);
 
     if (isNaN(min) || isNaN(max)) {
-        alert("Por favor, preencha os dois campos com números.");
+        alert("Por favor, preencha os dois campos com números válidos.");
         return;
     }
 
     if (min > max) {
-        alert("O valor mínimo não pode ser maior que o máximo!");
+        alert("O valor mínimo não pode ser maior que o máximo.");
         return;
     }
 
     const sorteado = Math.floor(Math.random() * (max - min + 1)) + min;
     alert("Número sorteado: " + sorteado);
 });
+
